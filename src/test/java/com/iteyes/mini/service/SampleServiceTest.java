@@ -1,4 +1,4 @@
-package com.iteyes.mini.controller;
+package com.iteyes.mini.service;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SampleControllerTest {
+class SampleServiceTest {
 
     @BeforeEach
     void setUp() {

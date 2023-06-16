@@ -1,19 +1,26 @@
 package com.iteyes.mini.controller;
 
+import com.iteyes.mini.request.SampleRequest;
+import com.iteyes.mini.service.SampleService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/sample")
 @AllArgsConstructor
 public class SampleController {
 
+    private final SampleService sampleService;
+
+    @PostMapping
+    public ResponseEntity<?> addSample(@RequestBody SampleRequest sampleRequest) {
+        return new ResponseEntity<>(sampleService.addSample(sampleRequest), HttpStatus.CREATED);
+    }
+
     @GetMapping
-    public ResponseEntity<?> sample() {
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<?> getSample(@RequestParam Long id) {
+        return new ResponseEntity<>(sampleService.getSample(id), HttpStatus.OK);
     }
 }

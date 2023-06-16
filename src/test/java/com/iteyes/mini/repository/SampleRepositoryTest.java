@@ -1,12 +1,11 @@
-package com.iteyes.mini.controller;
+package com.iteyes.mini.repository;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SampleControllerTest {
+class SampleRepositoryTest {
 
     @BeforeEach
     void setUp() {
@@ -14,13 +13,5 @@ class SampleControllerTest {
 
     @AfterEach
     void tearDown() {
-    }
-
-    @Test
-    void addSample() {
-    }
-
-    @Test
-    void getSample() {
     }
 }
